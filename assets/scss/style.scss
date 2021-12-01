@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$background_black: black;
+$black_lighten: lighten($background_black, 5);
+$blue: #1847b7;
+$grey: lighten($background_black, 40);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+  font-family: 'Fira Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $background_black;
+}
+
+header {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  background-color: $black_lighten;
+}
+
+body > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+header > a:hover {
+  background-color: $blue;
+  text-decoration: underline;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size50 {
+  font-size: 50px;
+}
+
+.colorWhite {
+  color: white;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.width_80 {
+  width: 80%;
+}
+
+.width_20 {
+  width: 20%;
+}
+
+.width_50 {
+  width: 50%;
+}
+
+.width_30 {
+  width: 30%;
+}
+
+.dev {
+  font-size: 25px;
+  color: $blue;
+  margin: 5px 0;
+}
+
+.background_white {
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.59) 0px 18px 36px -18px inset;}
+
+.marg30 {
+  margin: 30px;
+}
+
+.justify {
+  display: flex;
+  justify-content: center;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 3px;
+  color: $grey
+}
+
+h2 {
+  color: $blue;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.project {
+  width: 30%;
+  box-shadow: 5px 5px 15px $grey;
+  padding: 0;
+}
+
+.project:hover {
+  box-shadow: rgba(24, 71, 183, 0.4) 5px 5px, rgba(24, 71, 183, 0.3) 10px 10px, rgba(24, 71, 183, 0.2) 15px 15px, rgba(24, 71, 183, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.project > div {
+  width: 100%;
+}
+
+img {
+  border-radius: 10px 10px 0 0;
+}
+
+.titleProject {
+  margin-top: -10px;
+  background-color: #ffffff;
+  color: $black_lighten;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  font-size: 20px;
+}
+
+#profil {
+  font-size: 20px;
+}
+
+#profil > a {
+  color: $blue;
+}
+
+#profil > a:hover {
+  color: white;
+  text-decoration: underline;
+}
