@@ -136,6 +136,7 @@ h2, h1 {
 
 h1 {
   margin-bottom: 70px;
+  font-size: 40px;
 }
 
 .project {
@@ -214,6 +215,20 @@ textarea {
   background-color: $blue;
   transform-origin: center center;
   transform: rotate(70deg);
+  animation-duration: 15s;
+  animation-name: rotate;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(70deg);
+  }
+
+  to {
+    transform: rotate(340deg);
+  }
 }
 
 .image {
@@ -234,6 +249,7 @@ textarea {
 .imageProject1 {
   position: relative;
   width: 70%;
+  margin-bottom: -5px;
 }
 
 .imageProject2 {
@@ -267,4 +283,17 @@ textarea {
 
 .title:hover {
   color: $blue;
+}
+
+.fa-hand-point-right {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.fa-arrow-circle-up  {
+  color: $blue;
+  position: fixed;
+  bottom: 10px;
+  right: 3%;
+  font-size: 30px;
 }
