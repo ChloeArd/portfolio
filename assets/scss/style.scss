@@ -183,7 +183,20 @@ h1 {
   border: 1px solid #dadada;
   border-radius: 15px;
   padding: 30px;
+  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+  filter: blur(1px);
+  opacity: 0.8;
+  transition: 0.6s ease all;
+  box-shadow: -10px 10px 20px grey;
+
+  &:hover {
+    transform: perspective(800px) rotateY(0deg) translateY(-50px) rotateX(0deg) scale(1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    filter: blur(0);
+    opacity: 1;
+  }
 }
+
 
 .border:hover > h2 {
   text-decoration: underline;
@@ -206,7 +219,7 @@ textarea {
 
 #send {
   background-color: $blue;
-  border-radius: 20px 0 20px 0;
+  border-radius: 50px 0 50px 0;
 }
 
 #cube {
@@ -228,6 +241,35 @@ textarea {
 
   to {
     transform: rotate(340deg);
+  }
+}
+
+#changeColor {
+  animation-duration: 15s;
+  animation-name: color;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes color {
+  from {
+    color: $blue;
+  }
+
+  25% {
+    color: #008806;
+  }
+
+  50% {
+    color: red;
+  }
+
+  75% {
+    color: #efef2e;
+  }
+
+  to {
+    color: $blue;
   }
 }
 
