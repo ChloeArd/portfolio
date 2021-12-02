@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 $background_black: black;
 $black_lighten: lighten($background_black, 5);
@@ -47,12 +47,10 @@ a {
   color: white;
   margin: 0 20px;
   padding: 5px;
-  border-radius: 10px;
 }
 
 header > a:hover {
-  background-color: $blue;
-  text-decoration: underline;
+  border-bottom: 2px solid $blue;
 }
 
 .flexColumn {
@@ -128,12 +126,16 @@ li {
   color: $grey
 }
 
-h2 {
+h2, h1 {
   color: $blue;
   margin-bottom: 25px;
   font-size: 30px;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Acme', sans-serif;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 70px;
 }
 
 .project {
@@ -152,10 +154,6 @@ h2 {
 
 .project > div > img:hover {
   opacity: 0.7;
-}
-
-img {
-  border-radius: 10px 10px 0 0;
 }
 
 .titleProject {
@@ -188,4 +186,85 @@ img {
 
 .border:hover > h2 {
   text-decoration: underline;
+}
+
+input, textarea {
+  border: none;
+  border-bottom: 2px solid $blue;
+  padding: 5px;
+  background-color: $background_black;
+  color: white;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+textarea {
+  border: 2px solid $blue;
+  height: 200px;
+}
+
+#send {
+  background-color: $blue;
+  border-radius: 20px 0 20px 0;
+}
+
+#cube {
+  width: 500px;
+  height: 500px;
+  background-color: $blue;
+  transform-origin: center center;
+  transform: rotate(70deg);
+}
+
+.image {
+  position: absolute;
+  width: 20%;
+  left: 35%;
+}
+
+#profilTop {
+  position: absolute;
+  left: 55%;
+}
+
+.black {
+  color: $background_black;
+}
+
+.imageProject1 {
+  position: relative;
+  width: 70%;
+}
+
+.imageProject2 {
+  width: 30%;
+  background-color: #ececec;
+}
+
+.imageProject2 > img {
+  width: 100%;
+}
+
+.width_90 {
+  width: 90%;
+}
+
+#titleProject {
+  width: 80%;
+}
+
+.lineHorizontal {
+  border-bottom: 2px solid $background_black;
+  width: 30%;
+  margin: 15px 0;
+}
+
+.title {
+  font-size: 40px;
+  margin: 40px 0 0 0;
+  color: $background_black;
+}
+
+.title:hover {
+  color: $blue;
 }

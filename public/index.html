@@ -15,11 +15,13 @@
     </header>
 
     <div class="center">
-        <img class="image width_30" src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/262153064_625338848604319_7670623707462858068_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_ohc=VjgvdtDh7dYAX8OAUK6&_nc_ht=scontent-cdg2-1.xx&oh=5fa011074b10777bd7cca50ba3f19ccc&oe=61CB8C2C" alt="Chloé Ardoise">
-        <div class="flexColumn center colorWhite">
+        <div id="cube">
+        </div>
+        <img class="image" src="../assets/img/1.png" alt="Chloé Ardoise">
+        <div id="profilTop" class="flexColumn center colorWhite">
             <p>Hey, je m'appelle<p>
             <p class="size50">Chloé ARDOISE</p>
-            <p class="dev">Développeuse FullStack</p>
+            <p class="dev"><span class="black">Développeuse</span> FullStack</p>
         </div>
     </div>
 
@@ -70,8 +72,23 @@
     </div>
 
     <div id="projects" class="background_white center flexColumn">
-        <h2>Mes projets</h2>
+        <h1>Mes projets</h1>
         <div class="flexRow center">
+            <div>
+                <img class="imageProject1" src="../assets/img/262202024_224353823037268_4300898622644850545_n.png">
+                <div class="width_90 flexRow">
+                    <div class="flexColumn" id="titleProject">
+                        <a href="https://animnord.chloeard.fr" class="title">Anim'Nord</a>
+                        <div class="lineHorizontal"></div>
+                        <p>Site de chiens et de chats perdus ou trouvés dans la région Nord</p>
+                    </div>
+                    <div class="imageProject2">
+                        <img src="../assets/img/logo_animNord-removebg-preview.png">
+                    </div>
+                </div>
+            </div>
+
+            <!--
             <a href="https://animnord.chloeard.fr" class="project">
                 <div>
                     <img class="width_100" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/262202024_224353823037268_4300898622644850545_n.png?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_ohc=PseMCPw3lOcAX8tNGBl&_nc_ht=scontent-cdt1-1.xx&oh=e109e495979692ce89dfb1da20836548&oe=61CD640F" alt="Anim'Nord">
@@ -79,15 +96,18 @@
                 <div class="titleProject center">
                     <p>Anim'Nord</p>
                 </div>
-
             </a>
+            -->
         </div>
     </div>
 
     <div class="center flexColumn">
         <h2 id="contact" class="colorWhite">Contactez-moi ! 😃</h2>
-        <form>
-
+        <form class="width_50 flexColumn">
+            <input name="name" type="text" placeholder="Votre nom et votre prénom">
+            <input name="email" type="email" placeholder="Votre e-mail">
+            <textarea name="message" placeholder="Votre besoin ?"></textarea>
+            <input id="send" name="send" type="submit" value="Envoyer">
         </form>
     </div>
 </body>
