@@ -1,12 +1,12 @@
 <?php
 
-namespace Chloe\portfolio\Model\Manager;
+namespace Chloe\Portfolio\Model\Manager;
 
 require_once "Traits/ManagerTrait.php";
 
-use Chloe\portfolio\Model\DB;
-use Chloe\portfolio\Model\Entity\Project;
-use Chloe\portfolio\Model\Manager\Traits\ManagerTrait;
+use Chloe\Portfolio\Model\DB;
+use Chloe\Portfolio\Model\Entity\Project;
+use Chloe\Portfolio\Model\Manager\Traits\ManagerTrait;
 
 class ProjectManager {
 

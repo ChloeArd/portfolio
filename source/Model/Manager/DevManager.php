@@ -4,9 +4,9 @@ namespace Chloe\portfolio\Model\Manager;
 
 require_once "Traits/ManagerTrait.php";
 
-use Chloe\portfolio\Model\DB;
-use Chloe\portfolio\Model\Entity\Dev;
-use Chloe\portfolio\Model\Manager\Traits\ManagerTrait;
+use Chloe\Portfolio\Model\DB;
+use Chloe\Portfolio\Model\Entity\Dev;
+use Chloe\Portfolio\Model\Manager\Traits\ManagerTrait;
 
 class DevManager {
 

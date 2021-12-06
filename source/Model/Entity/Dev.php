@@ -1,5 +1,5 @@
 <?php
-namespace Chloe\portfolio\Model\Entity;
+namespace Chloe\Portfolio\Model\Entity;
 
 class Dev {
 
