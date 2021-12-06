@@ -5,8 +5,8 @@
 </header>
 
 <?php
- if (isset($var['user'])) {
-     foreach ($var['user'] as $user) { ?>
+if (isset($var['user'])) {
+    foreach ($var['user'] as $user) { ?>
         <div id="top" class="center">
             <div id="cube">
             </div>
@@ -23,8 +23,8 @@
             <a href="mailto:<?=$user->getEmail()?>"><i class="fas fa-envelope"></i> : <?=$user->getEmail()?></a>
         </div>
         <?php
-     }
- }
+    }
+}
 ?>
 
 <div class="background_white flexRow justify">
@@ -35,7 +35,7 @@
             if (isset($var['language'])) {
                 foreach ($var['language'] as $language) { ?>
                     <li><?=$language->getName()?></li>
-                <?php
+                    <?php
                 }
             }
             ?>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-        <?php
+                <?php
             }
         }
         ?>
@@ -110,6 +110,7 @@
     <form id="form" class="width_50 flexColumn">
         <input name="name" type="text" placeholder="Votre nom et votre prénom">
         <input name="email" type="email" placeholder="Votre e-mail">
+        <input name="subject" type="text" placeholder="Sujet">
         <textarea name="message" placeholder="Votre besoin ?"></textarea>
         <input id="send" name="send" type="submit" value="Envoyer">
     </form>

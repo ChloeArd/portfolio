@@ -211,7 +211,7 @@ textarea {
   transform: rotate(70deg);
   animation-duration: 15s;
   animation-name: rotate;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
@@ -228,7 +228,7 @@ textarea {
 #changeColor {
   animation-duration: 15s;
   animation-name: color;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
