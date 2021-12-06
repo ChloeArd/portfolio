@@ -158,15 +158,15 @@ h1 {
   border: 1px solid #dadada;
   border-radius: 15px;
   padding: 30px;
-  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg)!important;
   filter: blur(1px);
   opacity: 0.5;
-  transition: 0.6s ease all;
+  transition: 0.2s ease all;
   box-shadow: -10px 10px 20px grey;
 
   &:hover {
-    transform: perspective(800px) rotateY(0deg) translateY(-50px) rotateX(0deg) scale(1);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transform: perspective(800px) rotateY(0deg) translateY(-50px) rotateX(0deg) scale(1)!important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     filter: blur(0);
     opacity: 1;
   }
@@ -354,54 +354,27 @@ textarea {
   }
 }
 
-.reveal {
+.reveal [class*="reveal-"] {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(30px);
 }
 
-.reveal-visible {
+.reveal-visible [class*="reveal-"] {
   opacity: 1;
   transform: translateY(0);
   transition: 1s cubic-bezier(.5, 0, 0, 1);
 }
 
-.reveal-loaded .reveal [class*="reveal-"] {
-  opacity: 0!important;
-  animation: none!important;
-  transition: 0s!important;
+.reveal-visible .reveal-2 {
+  transition-delay: .3s;
 }
 
-.reveal-loaded [class*="reveal-"]{
-  animation: revealAnimation 1s cubic-bezier(.5, 0, 0, 1) both;
+.reveal-visible .reveal-3 {
+  transition-delay: .5s;
 }
 
-.reveal-loaded .reveal-2 {
-  animation-delay: .1s;
-}
-
-.reveal-loaded .reveal-3 {
-  animation-delay: .2s;
-}
-
-.reveal-loaded .reveal-4 {
-  animation-delay: .3s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-loaded  [class*="reveal-"] {
-    animation: none!important;
-  }
-}
-
-@keyframes revealAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.reveal-visible .reveal-4 {
+  transition-delay: .7s;
 }
 
 @media screen and (max-width: 1100px) {

@@ -3,6 +3,7 @@ import "./images/262202024_224353823037268_4300898622644850545_n.png";
 import "./images/logo_animNord-removebg-preview.png";
 import * as $ from "jquery";
 
+// creation of an intersection observer
 const ratio = .1;
 const options = {
     root: null,
@@ -19,12 +20,8 @@ const handleIntersect = function (entries, observer) {
     });
 }
 
-//document.documentElement.classList.add('reveal-loaded');
-
-//window.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver(handleIntersect, options);
-    const targets = document.querySelectorAll('.reveal');
-    targets.forEach(function (target) {
-        observer.observe(targets);
-    });
-//});
+const observer = new IntersectionObserver(handleIntersect, options);
+// The element to observe to make the animation
+document.querySelectorAll('.reveal').forEach(function (r) {
+    observer.observe(r);
+});

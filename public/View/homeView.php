@@ -1,17 +1,17 @@
-<header>
-    <a href="../../public/index.php">Acceuil</a>
-    <a href="#projects">Mes projets</a>
-    <a href="#contact">Contactez-moi</a>
+<header class="reveal">
+    <a href="../../public/index.php" class="reveal-1">Acceuil</a>
+    <a href="#projects" class="reveal-2">Mes projets</a>
+    <a href="#contact" class="reveal-3">Contactez-moi</a>
 </header>
 
 <?php
 if (isset($var['user'])) {
     foreach ($var['user'] as $user) { ?>
         <div id="top" class="center reveal">
-            <div id="cube">
+            <div id="cube" class="reveal-1">
             </div>
-            <img class="image" src="../build/images/<?=$user->getPicture()?>" alt="<?=$user->getFirstname() . " " . $user->getLastname()?>">
-            <div id="profilTop" class="flexColumn center colorWhite">
+            <img class="image reveal-2" src="../build/images/<?=$user->getPicture()?>" alt="<?=$user->getFirstname() . " " . $user->getLastname()?>">
+            <div id="profilTop" class="flexColumn center colorWhite reveal-3">
                 <p>Hey, je m'appelle<p>
                 <p class="size50"><?=$user->getFirstname() . " " . $user->getLastname()?></p>
                 <p class="dev"><span class="black">Développeuse</span> <span id="changeColor">FullStack</span></p>
@@ -28,7 +28,7 @@ if (isset($var['user'])) {
 ?>
 
 <div class="background_white flexRow justify reveal">
-    <div class="flexColumn marg30 border">
+    <div class="flexColumn marg30 reveal-1 border">
         <h2>Les langages aquis</h2>
         <ul>
             <?php
@@ -41,7 +41,7 @@ if (isset($var['user'])) {
             ?>
         </ul>
     </div>
-    <div class="flexColumn marg30 border">
+    <div class="flexColumn marg30 reveal-2 border">
         <h2>Outils de développement</h2>
         <ul>
             <?php
@@ -54,7 +54,7 @@ if (isset($var['user'])) {
             ?>
         </ul>
     </div>
-    <div class="flexColumn marg30 border">
+    <div class="flexColumn marg30 reveal-3 border">
         <h2>Mes compétences</h2>
         <ul>
             <?php
@@ -72,29 +72,29 @@ if (isset($var['user'])) {
     <?php
     if (isset($var['profile'])) {
         foreach ($var['profile'] as $profile) { ?>
-            <p class="width_80 colorWhite"><?=$profile->getProfile()?></p>
+            <p class="width_80 colorWhite reveal-1"><?=$profile->getProfile()?></p>
             <?php
         }
     }
     ?>
 </div>
 
-<div id="projects" class="background_white center flexColumn reveal">
+<div id="projects" class="background_white center flexColumn">
     <h1>Mes projets</h1>
     <div class="flexRow center">
         <?php
         if (isset($var['project'])) {
             foreach ($var['project'] as $project) { ?>
-                <div>
-                    <img class="imageProject1" src="build/images/<?=$project->getPicture1()?>">
+                <div class="reveal-1 reveal">
+                    <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>">
                     <div id="project" class="width_90 flexRow">
                         <div class="flexColumn" id="titleProject">
-                            <a href="<?=$project->getLink()?>" target="_blank" class="title"><i class="far fa-hand-point-right"></i><?=$project->getTitle()?></a>
+                            <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><i class="far fa-hand-point-right"></i><?=$project->getTitle()?></a>
                             <div class="lineHorizontal"></div>
-                            <p><?=$project->getDescription()?></p>
+                            <p class="reveal-4"><?=$project->getDescription()?></p>
                         </div>
                         <div class="imageProject2">
-                            <img src="build/images/<?=$project->getPicture2()?>">
+                            <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>">
                         </div>
                     </div>
                 </div>
@@ -105,9 +105,9 @@ if (isset($var['user'])) {
     </div>
 </div>
 
-<div class="center flexColumn reveal">
-    <h2 id="contact" class="colorWhite">Contactez-moi ! 😃</h2>
-    <form id="form" class="width_50 flexColumn">
+<div class="center flexColumn reveal-1 reveal">
+    <h2 id="contact" class="colorWhite reveal-2">Contactez-moi ! 😃</h2>
+    <form id="form" class="width_50 flexColumn reveal-3">
         <input name="name" type="text" placeholder="Votre nom et votre prénom">
         <input name="email" type="email" placeholder="Votre e-mail">
         <input name="subject" type="text" placeholder="Sujet">
