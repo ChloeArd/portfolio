@@ -1,6 +1,8 @@
 <?php
 namespace Chloe\Portfolio\Model\Entity;
 
+
+
 class User {
 
     private ?int $id;

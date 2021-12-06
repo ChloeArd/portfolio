@@ -3,6 +3,8 @@
 namespace Chloe\Portfolio\Model\Manager;
 
 require_once "Traits/ManagerTrait.php";
+require_once "../source/Model/DB.php";
+require_once "../source/Model/Entity/Project.php";
 
 use Chloe\Portfolio\Model\DB;
 use Chloe\Portfolio\Model\Entity\Project;

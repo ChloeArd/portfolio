@@ -8,7 +8,10 @@ use Chloe\Portfolio\Model\Manager\ProfileManager;
 use Chloe\Portfolio\Model\Manager\ProjectManager;
 use Chloe\Portfolio\Model\Manager\UserManager;
 
-require_once "../Model/Manager/UserManager.php";
+require_once "../source/Model/Manager/UserManager.php";
+require_once "../source/Model/Manager/DevManager.php";
+require_once "../source/Model/Manager/ProfileManager.php";
+require_once "../source/Model/Manager/ProjectManager.php";
 
 class HomeController {
 
@@ -21,13 +24,13 @@ class HomeController {
         $manager = new UserManager();
         $user = $manager->getUserID(1);
         $manager = new DevManager();
-        $langage = $manager->getDevCategorie("langage");
+        $language = $manager->getDevCategorie("language");
         $tool = $manager->getDevCategorie("tool");
         $skill = $manager->getDevCategorie("skill");
         $manager = new ProfileManager();
         $profile = $manager->getProfile2();
         $manager = new ProjectManager();
         $project = $manager->getProjects();
-        $this->return("homeView", "Mon portfolio : Chloé Ardoise", ["user" => $user, "langage" => $langage, "tool" => $tool, "skill" => $skill, "project" => $project, "profile" => $profile]);
+        $this->return("homeView", "Mon portfolio : Chloé Ardoise", ["user" => $user, "language" => $language, "tool" => $tool, "skill" => $skill, "project" => $project, "profile" => $profile]);
     }
 }
