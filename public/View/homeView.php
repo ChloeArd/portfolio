@@ -7,7 +7,7 @@
 <?php
 if (isset($var['user'])) {
     foreach ($var['user'] as $user) { ?>
-        <div id="top" class="center">
+        <div id="top" class="center reveal">
             <div id="cube">
             </div>
             <img class="image" src="../build/images/<?=$user->getPicture()?>" alt="<?=$user->getFirstname() . " " . $user->getLastname()?>">
@@ -27,7 +27,7 @@ if (isset($var['user'])) {
 }
 ?>
 
-<div class="background_white flexRow justify">
+<div class="background_white flexRow justify reveal">
     <div class="flexColumn marg30 border">
         <h2>Les langages aquis</h2>
         <ul>
@@ -68,7 +68,7 @@ if (isset($var['user'])) {
         </ul>
     </div>
 </div>
-<div class="center">
+<div class="center reveal">
     <?php
     if (isset($var['profile'])) {
         foreach ($var['profile'] as $profile) { ?>
@@ -79,7 +79,7 @@ if (isset($var['user'])) {
     ?>
 </div>
 
-<div id="projects" class="background_white center flexColumn">
+<div id="projects" class="background_white center flexColumn reveal">
     <h1>Mes projets</h1>
     <div class="flexRow center">
         <?php
@@ -105,7 +105,7 @@ if (isset($var['user'])) {
     </div>
 </div>
 
-<div class="center flexColumn">
+<div class="center flexColumn reveal">
     <h2 id="contact" class="colorWhite">Contactez-moi ! 😃</h2>
     <form id="form" class="width_50 flexColumn">
         <input name="name" type="text" placeholder="Votre nom et votre prénom">
