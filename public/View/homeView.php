@@ -69,6 +69,9 @@ if (isset($var['user'])) {
     </div>
 </div>
 <div class="center reveal">
+    <div class="circle circle-1 reveal-2"></div>
+    <div class="circle2 circle-2 reveal-3"></div>
+    <div class="circle2 circle-3 reveal-4"></div>
     <?php
     if (isset($var['profile'])) {
         foreach ($var['profile'] as $profile) { ?>
@@ -77,15 +80,20 @@ if (isset($var['user'])) {
         }
     }
     ?>
+    <div class="circle2 circle-4 reveal-2"></div>
+    <div class="circle circle-5 reveal-3"></div>
+    <div class="circle circle-6 reveal-4"></div>
 </div>
 
 <div id="projects" class="background_white center flexColumn">
     <h1>Mes projets</h1>
-    <div class="flexRow center">
+    <div class="flexColumn center">
         <?php
         if (isset($var['project'])) {
-            foreach ($var['project'] as $project) { ?>
-                <div class="reveal-1 reveal">
+            $i = 0;
+            foreach ($var['project'] as $project) {
+                if ($i === 0) {?>
+                <div class="reveal-1 reveal margB">
                     <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>">
                     <div id="project" class="width_90 flexRow">
                         <div class="flexColumn" id="titleProject">
@@ -99,6 +107,25 @@ if (isset($var['user'])) {
                     </div>
                 </div>
                 <?php
+                    $i++;
+                }
+                else {?>
+                    <div class="reveal-1 reveal margB projectInverse">
+                        <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>">
+                        <div id="project" class="width_90 flexRow">
+                            <div class="imageProject2">
+                                <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>">
+                            </div>
+                            <div class="flexColumn end" id="titleProject">
+                                <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><i class="far fa-hand-point-right"></i><?=$project->getTitle()?></a>
+                                <div class="lineHorizontal"></div>
+                                <p class="reveal-4"><?=$project->getDescription()?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    $i = 0;
+                }
             }
         }
         ?>
