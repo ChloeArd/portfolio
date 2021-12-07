@@ -78,24 +78,13 @@ a {
   color: white;
 }
 
-.width_100 {
-  width: 100%;
-}
-
-.width_80 {
-  width: 80%;
-}
-
-.width_20 {
-  width: 20%;
-}
-
-.width_50 {
-  width: 50%;
-}
-
-.width_30 {
-  width: 30%;
+$i: 10;
+$unit: '%';
+@while $i <= 100 {
+    .width_#{$i} {
+      width: #{$i + $unit};
+    }
+  $i: $i + 10;
 }
 
 .dev {
@@ -283,10 +272,6 @@ textarea {
   width: 100%;
 }
 
-.width_90 {
-  width: 90%;
-}
-
 #titleProject {
   width: 80%;
 }
@@ -356,7 +341,7 @@ textarea {
 
 .reveal [class*="reveal-"] {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(60px);
 }
 
 .reveal-visible [class*="reveal-"] {
@@ -365,16 +350,26 @@ textarea {
   transition: 1s cubic-bezier(.5, 0, 0, 1);
 }
 
-.reveal-visible .reveal-2 {
-  transition-delay: .3s;
-}
-
-.reveal-visible .reveal-3 {
-  transition-delay: .5s;
-}
-
-.reveal-visible .reveal-4 {
-  transition-delay: .7s;
+$i: 2;
+$y: 0.2;
+@while $i < 5 {
+  @if ($i == 2) {
+    .reveal-visible .reveal-#{$i} {
+      transition-delay: $y + .1s;
+    }
+  }
+  @else if($i == 3) {
+    .reveal-visible .reveal-#{$i} {
+      transition-delay: $y + .2s;
+    }
+  }
+  @else {
+    .reveal-visible .reveal-#{$i} {
+      transition-delay: $y + .3s;
+    }
+  }
+  $i: $i + 1;
+  $y: $y + 0.1;
 }
 
 @media screen and (max-width: 1100px) {
