@@ -10,6 +10,7 @@ export let Animation = function () {
             threshold: .1
         }
 
+        // Allows to make visible the elements according to the scroll.
         const handleIntersect = function (entries, observer) {
             entries.forEach(function (entry) {
                 if (entry.intersectionRatio > ratio) {
