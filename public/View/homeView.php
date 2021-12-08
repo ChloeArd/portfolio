@@ -14,7 +14,7 @@ if (isset($var['user'])) {
             <div id="profilTop" class="flexColumn center colorWhite reveal-3">
                 <p>Hey, je m'appelle<p>
                 <p class="size50"><?=$user->getFirstname() . " " . $user->getLastname()?></p>
-                <p class="dev"><span class="black">Développeuse</span> <span id="changeColor">FullStack</span></p>
+                <p class="dev"><span class="gray">Développeuse</span> <span id="changeColor">FullStack</span></p>
             </div>
         </div>
 

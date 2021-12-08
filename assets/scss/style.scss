@@ -256,14 +256,14 @@ textarea {
   left: 55%;
 }
 
-.black {
-  color: $background_black;
-}
-
 .imageProject1 {
   position: relative;
   width: 70%;
   margin-bottom: -30px;
+}
+
+.gray {
+  color: #adadad;
 }
 
 .imageProject2 {
@@ -484,9 +484,6 @@ $y: 0.2;
   }
   #top {
     flex-direction: column;
-  }
-  .black {
-    color: white;
   }
   #form {
     width: 100%;
