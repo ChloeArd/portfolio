@@ -21,6 +21,7 @@ if (isset($var['user'])) {
         <div id="profil" class="flexRow">
             <a href="tel:<?=$user->getPhone()?>"><i class="fas fa-phone-square-alt"></i> : <?=$user->getPhone()?></a>
             <a href="mailto:<?=$user->getEmail()?>"><i class="fas fa-envelope"></i> : <?=$user->getEmail()?></a>
+            <a href="https://github.com/ChloeArd" target="_blank"><i class="fab fa-github"></i> : ChloeArd</a>
         </div>
         <?php
     }
@@ -75,7 +76,7 @@ if (isset($var['user'])) {
     <?php
     if (isset($var['profile'])) {
         foreach ($var['profile'] as $profile) { ?>
-            <p class="width_80 colorWhite reveal-1"><?=$profile->getProfile()?></p>
+            <p id="profile" class="width_80 colorWhite reveal-1"><?=$profile->getProfile()?></p>
             <?php
         }
     }
