@@ -117,7 +117,7 @@ if (isset($var['user'])) {
                                 <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>">
                             </div>
                             <div class="flexColumn end" id="titleProject">
-                                <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><i class="far fa-hand-point-right"></i><?=$project->getTitle()?></a>
+                                <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><?=$project->getTitle()?><i class="far fa-hand-point-left"></i></a>
                                 <div class="lineHorizontal"></div>
                                 <p class="reveal-4"><?=$project->getDescription()?></p>
                             </div>
@@ -133,7 +133,7 @@ if (isset($var['user'])) {
 </div>
 
 <div class="center flexColumn reveal-1 reveal">
-    <h2 id="contact" class="colorWhite reveal-2">Contactez-moi ! 😃</h2>
+    <h2 id="contact" class="colorWhite reveal-2">Contactez-moi ! <i class="fas fa-grin-alt"></i></h2>
     <form id="form" class="width_50 flexColumn reveal-3">
         <input name="name" type="text" placeholder="Votre nom et votre prénom">
         <input name="email" type="email" placeholder="Votre e-mail">
