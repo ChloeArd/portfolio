@@ -288,6 +288,10 @@ textarea {
   align-items: end;
 }
 
+.center2 {
+  text-align: center;
+}
+
 .lineHorizontal {
   border-bottom: 2px solid $background_black;
   margin: 15px 0;
@@ -503,5 +507,11 @@ $y: 0.2;
   }
   #profil {
     font-size: 15px;
+  }
+  .size50 {
+    font-size: 40px;
+  }
+  .circle, .circle2 {
+    display: none;
   }
 }

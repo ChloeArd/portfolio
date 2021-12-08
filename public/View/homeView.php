@@ -11,7 +11,7 @@ if (isset($var['user'])) {
             <div id="cube" class="reveal-1">
             </div>
             <img class="image reveal-2" src="../build/images/<?=$user->getPicture()?>" alt="<?=$user->getFirstname() . " " . $user->getLastname()?>">
-            <div id="profilTop" class="flexColumn center colorWhite reveal-3">
+            <div id="profilTop" class="flexColumn center center2 colorWhite reveal-3">
                 <p>Hey, je m'appelle<p>
                 <p class="size50"><?=$user->getFirstname() . " " . $user->getLastname()?></p>
                 <p class="dev"><span class="gray">Développeuse</span> <span id="changeColor">FullStack</span></p>
