@@ -28,45 +28,58 @@ if (isset($var['user'])) {
 }
 ?>
 
-<div class="background_white flexRow justify reveal">
-    <div class="flexColumn marg30 reveal-1 border">
-        <h2>Les langages aquis</h2>
-        <ul>
-            <?php
-            if (isset($var['language'])) {
-                foreach ($var['language'] as $language) { ?>
-                    <li><?=$language->getName()?></li>
-                    <?php
+<div class="background_white flexColumn justify reveal">
+    <div class="flexRow width_100 center">
+        <div class="flexColumn marg30 reveal-1 border">
+            <h2>Les langages aquis</h2>
+            <ul>
+                <?php
+                if (isset($var['language'])) {
+                    foreach ($var['language'] as $language) { ?>
+                        <li><?=$language->getName()?></li>
+                        <?php
+                    }
                 }
-            }
-            ?>
-        </ul>
+                ?>
+            </ul>
+        </div>
+        <div class="flexColumn marg30 reveal-2 border">
+            <h2>Outils de développement</h2>
+            <ul>
+                <?php
+                if (isset($var['tool'])) {
+                    foreach ($var['tool'] as $tool) { ?>
+                        <li><?=$tool->getName()?></li>
+                        <?php
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+        <div class="flexColumn marg30 reveal-3 border">
+            <h2>Mes compétences</h2>
+            <ul>
+                <?php
+                if (isset($var['skill'])) {
+                    foreach ($var['skill'] as $skill) { ?>
+                        <li><?=$skill->getName()?></li>
+                        <?php
+                    }
+                }
+                ?>
+            </ul>
+        </div>
     </div>
-    <div class="flexColumn marg30 reveal-2 border">
-        <h2>Outils de développement</h2>
-        <ul>
-            <?php
-            if (isset($var['tool'])) {
-                foreach ($var['tool'] as $tool) { ?>
-                    <li><?=$tool->getName()?></li>
-                    <?php
-                }
-            }
-            ?>
-        </ul>
+</div>
+<div class="flexRow padNot reveal">
+    <div class="triangle"></div>
+    <div class="width_30 imageDev1 absolute">
+        <div class="carre1 absolute reveal-4"></div>
+        <img class="width_100 reveal-2" src="../build/images/photo-1499951360447-b19be8fe80f5.png">
     </div>
-    <div class="flexColumn marg30 reveal-3 border">
-        <h2>Mes compétences</h2>
-        <ul>
-            <?php
-            if (isset($var['skill'])) {
-                foreach ($var['skill'] as $skill) { ?>
-                    <li><?=$skill->getName()?></li>
-                    <?php
-                }
-            }
-            ?>
-        </ul>
+    <div class="width_30 imageDev2 absolute">
+        <div class="carre2 absolute reveal-4"></div>
+        <img class="width_100 reveal-2" src="../build/images/photo-1488590528505-98d2b5aba04b.png">
     </div>
 </div>
 <div class="center reveal">
