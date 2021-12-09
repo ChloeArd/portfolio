@@ -60,11 +60,11 @@ if (isset($var['user'])) {
     <p class="textDev width_30 absolute reveal-1">Je suis une développeuse <span class="bold reveal-2">Front-End</span> et <span class="bold reveal-2">Back-End</span></p>
     <div class="width_30 imageDev1 absolute">
         <div class="carre1 absolute reveal-4"></div>
-        <img class="width_100 reveal-2" src="../build/images/photo-1499951360447-b19be8fe80f5.png">
+        <img class="width_100 reveal-2" src="../build/images/photo-1499951360447-b19be8fe80f5.png" alt="dev">
     </div>
     <div class="width_30 imageDev2 absolute">
         <div class="carre2 absolute reveal-4"></div>
-        <img class="width_100 reveal-2" src="../build/images/photo-1488590528505-98d2b5aba04b.png">
+        <img class="width_100 reveal-2" src="../build/images/photo-1488590528505-98d2b5aba04b.png" alt="dev">
     </div>
 </div>
 
@@ -137,7 +137,7 @@ if (isset($var['user'])) {
             foreach ($var['project'] as $project) {
                 if ($i === 0) {?>
                 <div class="reveal-1 reveal margB">
-                    <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>">
+                    <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>" alt="photo du site <?=$project->getTitle()?>">
                     <div id="project" class="width_90 flexRow">
                         <div class="flexColumn" id="titleProject">
                             <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><i class="far fa-hand-point-right"></i><?=$project->getTitle()?></a>
@@ -145,7 +145,7 @@ if (isset($var['user'])) {
                             <p class="reveal-4"><?=$project->getDescription()?></p>
                         </div>
                         <div class="imageProject2">
-                            <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>">
+                            <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>" alt="photo du logo du site <?=$project->getTitle()?>">
                         </div>
                     </div>
                 </div>
@@ -154,10 +154,10 @@ if (isset($var['user'])) {
                 }
                 else {?>
                     <div class="reveal-1 reveal margB projectInverse">
-                        <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>">
+                        <img class="imageProject1 reveal-2" src="build/images/<?=$project->getPicture1()?>" alt="photo du site <?=$project->getTitle()?>">
                         <div id="project" class="width_90 flexRow">
                             <div class="imageProject2">
-                                <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>">
+                                <img class="reveal-2" src="build/images/<?=$project->getPicture2()?>" alt="photo du logo du site <?=$project->getTitle()?>">
                             </div>
                             <div class="flexColumn end" id="titleProject">
                                 <a href="<?=$project->getLink()?>" target="_blank" class="title reveal-3"><?=$project->getTitle()?><i class="far fa-hand-point-left"></i></a>
