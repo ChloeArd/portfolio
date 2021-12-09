@@ -502,6 +502,8 @@ $y: 0.2;
   font-size: 40px;
 }
 
+$light_blue: lighten($blue, 15);
+
 #profile, .contact{
   background-color: $background_black;
   animation: textColor 10s ease infinite;
@@ -511,13 +513,13 @@ $y: 0.2;
       color: white;
     }
     25% {
-      color: $blue;
+      color: $light_blue;
     }
     50% {
-      color: #7e0fff;
+      color: #bc7bff;
     }
     75% {
-      color: $blue;
+      color: $light_blue;
     }
     100% {
       color: white;
@@ -537,13 +539,13 @@ $y: 0.2;
       background-color: white;
     }
     25% {
-      background-color: $blue;
+      background-color: $light_blue;
     }
     50% {
-      background-color: #7e0fff;
+      background-color: #bc7bff;
     }
     75% {
-       background-color: $blue;
+       background-color: $light_blue;
      }
     100% {
       background-color: white;
@@ -559,13 +561,13 @@ $y: 0.2;
       border: 2px solid white;
     }
     25% {
-      border: 2px solid $blue;
+      border: 2px solid $light_blue;
     }
     50% {
-      border: 2px solid #7e0fff;
+      border: 2px solid #bc7bff;
     }
     75% {
-      border: 2px solid $blue;
+      border: 2px solid $light_blue;
     }
     100% {
       border: 2px solid white;
