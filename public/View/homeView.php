@@ -26,7 +26,7 @@ if (isset($_GET['error'])) {
 ?>
 <div id='<?= $id?>' class='modal colorWhite center'><?= $return?></div>
 <header class="reveal">
-    <a href="../../public/index.php" class="reveal-1">Acceuil</a>
+    <a href="../../public/index.php" class="reveal-1">Accueil</a>
     <a href="#projects" class="reveal-2">Mes projets</a>
     <a href="#contact" class="reveal-3">Contactez-moi</a>
 </header>
@@ -69,7 +69,7 @@ if (isset($var['user'])) {
 </div>
 
 <div class="background_white flexColumn justify reveal">
-    <div class="flexRow width_100 center">
+    <div class="flexRow width_100 center wrap">
         <div class="flexColumn marg30 reveal-1 border">
             <h2>Les langages aquis</h2>
             <ul>

@@ -446,8 +446,6 @@ $y: 0.2;
   border-bottom: 900px solid white;
   width: 0;
   height: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.76) 0 18px 36px -18px inset;
-
 }
 
 .padNot {
@@ -527,6 +525,10 @@ $y: 0.2;
   }
 }
 
+#profile {
+  line-height: 30px;
+}
+
 .circle {
   animation: backColor 10s ease infinite;
 
@@ -588,12 +590,26 @@ $y: 0.2;
   background-color: $blue;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1210px) {
+  .triangle {
+    border-right: 700px solid transparent;
+    border-bottom: 900px solid white;
+  }
+  .imageDev1, .imageDev2 {
+    height: 30%;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .border {
     border: 1px solid #dadada;
     border-radius: 15px;
     padding: 30px;
-    transform: perspective(800px) rotateY(0deg) translateY(-50px) rotateX(0deg) scale(1);
+    transform: perspective(800px) rotateY(0deg) translateY(-50px) rotateX(0deg) scale(1)!important;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     filter: blur(0);
     opacity: 1;
@@ -615,6 +631,19 @@ $y: 0.2;
   }
   .imageProject2 {
     width: 40%;
+  }
+  .imageDev1, .imageDev2 {
+    width: 40%;
+    height: initial;
+  }
+  .textDev {
+    left: 8%;
+  }
+  .carre1, .carre2 {
+    display: none;
+  }
+  #titleProject {
+    width: 100%;
   }
 }
 
@@ -652,5 +681,31 @@ $y: 0.2;
   }
   .circle, .circle2 {
     display: none;
+  }
+  .textDev {
+    text-align: center;
+    width: 80%;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .imageDev1, .imageDev2 {
+    width: 70%;
+  }
+  .imageDev1 {
+    margin-top: 550px;
+  }
+  .triangle {
+    border-bottom: 1000px solid white;
+    border-right: 500px solid transparent;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .triangle {
+    border-bottom: 800px solid white;
+    border-right: 300px solid transparent;
+  }
+  .imageDev1 {
+    margin-top: 450px;
   }
 }
