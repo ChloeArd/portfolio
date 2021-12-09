@@ -443,7 +443,7 @@ $y: 0.2;
 
 .triangle {
   border-right: 1200px solid transparent;
-  border-bottom: 900px solid white;
+  border-bottom: 1000px solid white;
   width: 0;
   height: 0;
 }
@@ -596,10 +596,15 @@ $light_blue: lighten($blue, 15);
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1900px) {
+  .triangle {
+    border-bottom: 900px solid white;
+  }
+}
+
 @media screen and (max-width: 1210px) {
   .triangle {
     border-right: 700px solid transparent;
-    border-bottom: 900px solid white;
   }
   .imageDev1, .imageDev2 {
     height: 30%;
