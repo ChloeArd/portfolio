@@ -1,6 +1,6 @@
 <?php
 
-namespace Chloe\portfolio\Model;
+namespace Chloe\Portfolio\Model;
 
 use PDO;
 use PDOException;
