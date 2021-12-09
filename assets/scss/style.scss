@@ -114,7 +114,7 @@ $unit: '%';
 }
 
 li {
-  padding: 3px;
+  padding: 5px;
   color: $grey
 }
 
@@ -398,13 +398,11 @@ $y: 0.2;
 }
 
 .circle {
-  background-color: $blue;
   border-radius: 50%;
   position: absolute;
 }
 
 .circle2 {
-  border: 2px solid $blue;
   border-radius: 50%;
   position: absolute;
 }
@@ -443,15 +441,9 @@ $y: 0.2;
   margin-top: 250px;
 }
 
-#profile {
-  i {
-    color: #00c507;
-  }
-}
-
 .triangle {
   border-right: 1200px solid transparent;
-  border-top: 900px solid white;
+  border-bottom: 900px solid white;
   width: 0;
   height: 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.76) 0 18px 36px -18px inset;
@@ -468,7 +460,7 @@ $y: 0.2;
 
 .imageDev1 {
   left: 10%;
-  margin-top: 150px;
+  margin-top: 450px;
   height: 40%;
 
   img {
@@ -496,11 +488,86 @@ $y: 0.2;
 
 .imageDev2 {
   right: 10%;
-  margin-top: 450px;
+  margin-top: 150px;
   height: 40%;
 
   img {
     height: 100%;
+  }
+}
+
+.textDev {
+  z-index: 0;
+  left: 20%;
+  margin-top: 100px;
+  color: #dadada;
+  font-size: 40px;
+}
+
+#profile, .contact{
+  background-color: $background_black;
+  animation: textColor 10s ease infinite;
+
+  @keyframes textColor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: $blue;
+    }
+    50% {
+      color: #7e0fff;
+    }
+    75% {
+      color: $blue;
+    }
+    100% {
+      color: white;
+    }
+  }
+}
+
+.circle {
+  animation: backColor 10s ease infinite;
+
+  @keyframes backColor {
+    0% {
+      background-color: white;
+    }
+    25% {
+      background-color: $blue;
+    }
+    50% {
+      background-color: #7e0fff;
+    }
+    75% {
+       background-color: $blue;
+     }
+    100% {
+      background-color: white;
+    }
+  }
+}
+
+.circle2 {
+  animation: borderColor 10s ease infinite;
+
+  @keyframes borderColor {
+    0% {
+      border: 2px solid white;
+    }
+    25% {
+      border: 2px solid $blue;
+    }
+    50% {
+      border: 2px solid #7e0fff;
+    }
+    75% {
+      border: 2px solid $blue;
+    }
+    100% {
+      border: 2px solid white;
+    }
   }
 }
 

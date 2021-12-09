@@ -1,3 +1,30 @@
+<?php
+$return = "";
+$id = "";
+
+if (isset($_GET['success'])) {
+    $id = "success";
+    switch ($_GET['success']) {
+        case '0':
+            $return = "Votre message a bien été envoyé !";
+            break;
+    }
+}
+
+if (isset($_GET['success'])) {
+    $id = "success";
+    switch ($_GET['success']) {
+        case '0':
+            $return = "Tous les champs ne sont pas complétés !";
+            break;
+        case '1':
+            $return = "Votre e-mail n'est pas valide !";
+            break;
+    }
+}
+
+?>
+<div id='<?= $id?>' class='modal2 colorWhite'><?= $return?></div>
 <header class="reveal">
     <a href="../../public/index.php" class="reveal-1">Acceuil</a>
     <a href="#projects" class="reveal-2">Mes projets</a>
@@ -27,6 +54,19 @@ if (isset($var['user'])) {
     }
 }
 ?>
+
+<div class="flexRow padNot reveal">
+    <div class="triangle"></div>
+    <p class="textDev width_30 absolute reveal-1">Je suis une développeuse <span class="bold reveal-2">Front-End</span> et <span class="bold reveal-2">Back-End</span></p>
+    <div class="width_30 imageDev1 absolute">
+        <div class="carre1 absolute reveal-4"></div>
+        <img class="width_100 reveal-2" src="../build/images/photo-1499951360447-b19be8fe80f5.png">
+    </div>
+    <div class="width_30 imageDev2 absolute">
+        <div class="carre2 absolute reveal-4"></div>
+        <img class="width_100 reveal-2" src="../build/images/photo-1488590528505-98d2b5aba04b.png">
+    </div>
+</div>
 
 <div class="background_white flexColumn justify reveal">
     <div class="flexRow width_100 center">
@@ -69,17 +109,6 @@ if (isset($var['user'])) {
                 ?>
             </ul>
         </div>
-    </div>
-</div>
-<div class="flexRow padNot reveal">
-    <div class="triangle"></div>
-    <div class="width_30 imageDev1 absolute">
-        <div class="carre1 absolute reveal-4"></div>
-        <img class="width_100 reveal-2" src="../build/images/photo-1499951360447-b19be8fe80f5.png">
-    </div>
-    <div class="width_30 imageDev2 absolute">
-        <div class="carre2 absolute reveal-4"></div>
-        <img class="width_100 reveal-2" src="../build/images/photo-1488590528505-98d2b5aba04b.png">
     </div>
 </div>
 <div class="center reveal">
@@ -155,6 +184,7 @@ if (isset($var['user'])) {
         <textarea name="message" placeholder="Votre besoin ?"></textarea>
         <input id="send" name="send" type="submit" value="Envoyer">
     </form>
+
 </div>
 
 <a href="#"><i class="fas fa-arrow-circle-up"></i></a>
