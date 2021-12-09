@@ -3,7 +3,7 @@ $return = "";
 $id = "";
 
 if (isset($_GET['success'])) {
-    $id = "success";
+    $id = "modal";
     switch ($_GET['success']) {
         case '0':
             $return = "Votre message a bien été envoyé !";
@@ -11,9 +11,9 @@ if (isset($_GET['success'])) {
     }
 }
 
-if (isset($_GET['success'])) {
-    $id = "success";
-    switch ($_GET['success']) {
+if (isset($_GET['error'])) {
+    $id = "modal";
+    switch ($_GET['error']) {
         case '0':
             $return = "Tous les champs ne sont pas complétés !";
             break;
@@ -24,7 +24,7 @@ if (isset($_GET['success'])) {
 }
 
 ?>
-<div id='<?= $id?>' class='modal2 colorWhite'><?= $return?></div>
+<div id='<?= $id?>' class='modal colorWhite center'><?= $return?></div>
 <header class="reveal">
     <a href="../../public/index.php" class="reveal-1">Acceuil</a>
     <a href="#projects" class="reveal-2">Mes projets</a>

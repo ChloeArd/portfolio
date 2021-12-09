@@ -571,6 +571,23 @@ $y: 0.2;
   }
 }
 
+.bold {
+  font-weight: bold;
+  color: $blue;
+}
+
+.modal {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  font-size: 22px;
+  display: none;
+  background-color: $blue;
+}
+
 @media screen and (max-width: 1100px) {
   .border {
     border: 1px solid #dadada;

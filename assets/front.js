@@ -9,3 +9,10 @@ import {Animation} from "./js/Animation.mjs";
 
 let animation = new Animation();
 animation.observer();
+
+if (document.getElementById("modal")) {
+    document.getElementById("modal").style.display = "flex";
+    setTimeout(function () {
+        document.getElementById("modal").style.display = "none";
+    }, 15000);
+}
