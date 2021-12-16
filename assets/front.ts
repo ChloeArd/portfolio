@@ -47,4 +47,4 @@ const modal = document.getElementById("modal") as HTMLDivElement;
 modal.style.display = "flex";
 setTimeout(function () {
     modal.style.display = "none";
-}, 15000);
+}, 10000);
