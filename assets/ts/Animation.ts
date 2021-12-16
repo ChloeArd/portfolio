@@ -1,17 +1,21 @@
 
-export let Animation = function () {
+export class Animation {
 
-    this.observer = function () {
+    public observer(): void {
         // creation of an intersection observer
-        const ratio = .1;
-        const options = {
+        const ratio: number = .1;
+        const options : {
+            root: null;
+            rootMargin: string;
+            threshold: number
+        } = {
             root: null,
             rootMargin: '0px',
             threshold: .1
         }
 
         // Allows to make visible the elements according to the scroll.
-        const handleIntersect = function (entries, observer) {
+        const handleIntersect = function (entries: any[], observer: { unobserve: (arg0: any) => void; }) {
             entries.forEach(function (entry) {
                 if (entry.intersectionRatio > ratio) {
                     entry.target.classList.add('reveal-visible');
@@ -26,4 +30,4 @@ export let Animation = function () {
             observer.observe(r);
         });
     }
-};
+}
