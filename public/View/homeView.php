@@ -177,7 +177,7 @@ if (isset($var['user'])) {
 
 <div class="center flexColumn reveal-1 reveal">
     <h2 id="contact" class="colorWhite reveal-2">Contactez-moi ! <i class="fas fa-grin-alt"></i></h2>
-    <form id="form" method="post" class="width_50 flexColumn reveal-3">
+    <form id="form" action="../php/contact.php" method="post" class="width_50 flexColumn reveal-3">
         <input name="name" type="text" placeholder="Votre nom et votre prénom">
         <input name="email" type="email" placeholder="Votre e-mail">
         <input name="subject" type="text" placeholder="Sujet">
