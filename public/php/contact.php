@@ -14,12 +14,12 @@ if (isset($_POST["email"], $_POST["subject"], $_POST['message'], $_POST['name'])
     );
     if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
         mail($to, $subject, $message, "-f " . $email);
-        header("Location: ../../success=0");
+        header("Location: ../../?success=0");
     }
     else {
-        header("Location: ../../error=1");
+        header("Location: ../../?error=1");
     }
 }
 else {
-    header("Location: ../../error=0");
+    header("Location: ../../?error=0");
 }
