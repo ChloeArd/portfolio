@@ -3,17 +3,17 @@
 if (isset($_POST["email"], $_POST["subject"], $_POST['message'], $_POST['name'])) {
 
     $email = htmlentities(trim($_POST['email']));
-    $to = "chloe.ardoise@gmail.com";
+    $to = "chloe@chloeard.fr";
     $subject = htmlentities(trim($_POST['subject']));
-    $message = htmlentities(trim($_POST['message'])) . "De " . htmlentities(trim($_POST['name']));
+    $message = htmlentities(trim($_POST['message'])) . "<br><br>De " . htmlentities(trim($_POST['name']));
     $message = wordwrap($message, 70, "\r\n");
     $headers = array(
         'Reply-To' => $email,
-        'Cc' => 'chloe.ardoise@gmail.com',
+        'Cc' => 'chloe@chloeard.fr',
         'X-Mailer' => 'PHP/' . phpversion()
     );
     if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        mail($to, $subject, $message, "-f " . $email);
+        mail($to, $subject, $message, $headers, "-f " . $email);
         header("Location: ../../?success=0");
     }
     else {
