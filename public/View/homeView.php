@@ -26,7 +26,7 @@ if (isset($_GET['error'])) {
 ?>
 <div id='<?= $id?>' class='modal colorWhite center'><?= $return?></div>
 <header class="reveal">
-    <a href="../../public/index.php" class="reveal-1">Accueil</a>
+    <a href="#" class="reveal-1">Accueil</a>
     <a href="#projects" class="reveal-2">Mes projets</a>
     <a href="#contact" class="reveal-3">Contactez-moi</a>
 </header>
@@ -49,6 +49,7 @@ if (isset($var['user'])) {
             <a href="tel:<?=$user->getPhone()?>"><i class="fas fa-phone-square-alt"></i> : <?=$user->getPhone()?></a>
             <a href="mailto:<?=$user->getEmail()?>"><i class="fas fa-envelope"></i> : <?=$user->getEmail()?></a>
             <a href="https://github.com/ChloeArd" target="_blank"><i class="fab fa-github"></i> : ChloeArd</a>
+            <a href="https://www.linkedin.com/in/chlo%C3%A9-ardoise-a222a3231/" target="_blank"><i class="fa-brands fa-linkedin"></i> : Chloé Ardoise</a>
         </div>
         <?php
     }
