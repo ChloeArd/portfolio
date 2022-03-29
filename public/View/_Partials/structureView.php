@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $title ?></title>
+    <link id="logoPage" rel="icon" type="image/png" href="../../build/images/1.png">
     <link rel="stylesheet" href="../../build/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/351e9300a0.js" crossorigin="anonymous"></script>
